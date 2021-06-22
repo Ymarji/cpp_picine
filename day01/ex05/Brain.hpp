@@ -6,7 +6,7 @@
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 15:01:19 by ymarji            #+#    #+#             */
-/*   Updated: 2021/06/20 15:20:28 by ymarji           ###   ########.fr       */
+/*   Updated: 2021/06/22 10:27:14 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,10 @@
 # include <sstream>
 
 class Brain{
-	public:
-		Brain(){};
-		~Brain(){};
-		std::string		identify();
 	private:
+		std::string _owner;
+	public:
+		std::string	 identify1() const;
 };
 
 #endif

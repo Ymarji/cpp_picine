@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/20 15:00:45 by ymarji            #+#    #+#             */
-/*   Updated: 2021/06/22 11:08:57 by ymarji           ###   ########.fr       */
+/*   Created: 2021/06/22 10:39:11 by ymarji            #+#    #+#             */
+/*   Updated: 2021/06/22 15:24:00 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
-std::string		Brain::identify1() const {
-	// void *add = (this);
-	std::stringstream tmp;
-	tmp << this;
-	std::string str = tmp.str();
-	for (size_t i = 0; i < str.length(); i++)
-		str[i] = toupper(str[i]);
-	return (str);
-}
+#include <string>
+#include <iostream>
+
+class Weapon
+{
+	private:
+		std::string	_type;
+	public:
+		std::string const& getType() const;
+		void setType(std::string);
+};
+
+#endif

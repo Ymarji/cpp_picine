@@ -6,7 +6,7 @@
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 14:22:36 by ymarji            #+#    #+#             */
-/*   Updated: 2021/06/20 14:34:21 by ymarji           ###   ########.fr       */
+/*   Updated: 2021/06/22 11:12:04 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 ZombieHorde::ZombieHorde(int p1): _N(p1){
 	this->_Zombie = new Zombie[_N];
-	std::array<std::string, 6> names = {"Zombye", "Husk", "Staby", "Ogre", "Smochen", "KawaiZ"};
+	char *names[6] = {"Zombye", "Husk", "Staby", "Ogre", "Smochen", "KawaiZ"};
+
 	std::srand(time(NULL));
 	for (int i = 0; i < this->_N; i++)
 	{
