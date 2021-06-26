@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Human.hpp                                          :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/20 16:34:07 by ymarji            #+#    #+#             */
-/*   Updated: 2021/06/22 10:36:49 by ymarji           ###   ########.fr       */
+/*   Created: 2021/06/23 10:25:52 by ymarji            #+#    #+#             */
+/*   Updated: 2021/06/23 10:26:18 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAN_HPP
-# define HUMAN_HPP
-#include "Brain.hpp"
+#include "Zombie.hpp"
 
-class Human{
-	private:
-		Brain const _brain;
-	public:
-		Human(){}
-		std::string	identify() const;
-		Brain const &		getBrain();
-};
-#endif
+Zombie* newZombie(std::string name){
+	Zombie *z = new Zombie(name);
+	return (z);
+}

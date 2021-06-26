@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/16 16:10:54 by ymarji            #+#    #+#             */
-/*   Updated: 2021/06/17 11:59:33 by ymarji           ###   ########.fr       */
+/*   Created: 2021/06/20 12:06:32 by ymarji            #+#    #+#             */
+/*   Updated: 2021/06/24 09:46:00 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIEEVENT_HPP
-#define ZOMBIEEVENT_HPP
-
 #include "Zombie.hpp"
 
-class ZombieEvent
+void Zombie::announce(void)
 {
-	private:
-		std::string _type;
-	public:
-		void	setZombieType();
-		Zombie* newZombie(std::string);
-};
+	std::cout << "<" << this->_name << ">  Braiiiiiiinnnssss..." << std::endl;
+}
 
-#endif
+void Zombie::setName(std::string name)
+{
+	this->_name = name;
+}
+
+Zombie::Zombie(std::string p1) : _name(p1)
+{
+}
+
+Zombie::~Zombie()
+{
+	std::cout << "<" << this->_name << ">  Got cured Successfully" << std::endl;
+}

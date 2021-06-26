@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.cpp                                           :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/20 11:33:02 by ymarji            #+#    #+#             */
-/*   Updated: 2021/06/20 11:38:25 by ymarji           ###   ########.fr       */
+/*   Created: 2021/06/25 11:34:09 by ymarji            #+#    #+#             */
+/*   Updated: 2021/06/25 11:37:16 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "Pony.hpp"
+#ifndef KAREN_HPP
+# define KAREN_HPP
 
-Pony::Pony(std::string p1): _name(p1){
-	std::cout << "   Pony object created : " << _name << std::endl;
-}
+#include <iostream>
+#include <string.h>
 
-Pony::~Pony()
-{
-	std::cout << "   Pony object deleted : " << _name << std::endl;
-}
+class Karen{
+	private :
+		void debug( void );
+		void info( void );
+		void warning( void );
+		void error( void );
+	public :
+		void complain( std::string level );
+};
+#endif

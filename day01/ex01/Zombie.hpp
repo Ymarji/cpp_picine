@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/20 12:06:32 by ymarji            #+#    #+#             */
-/*   Updated: 2021/06/20 12:30:22 by ymarji           ###   ########.fr       */
+/*   Created: 2021/06/20 12:06:50 by ymarji            #+#    #+#             */
+/*   Updated: 2021/06/24 09:45:57 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
-void	Zombie::announce(){
-	std::cout << "<" << this->_name << " (" << this->_type <<")>  Braiiiiiiinnnssss..." << std::endl;
-}
+#include <iostream>
+#include <string>
+#include <array>
 
-Zombie::Zombie(std::string p1, std::string p2): _name(p1), _type(p2){
-	this->announce();
-}
-Zombie::~Zombie()
+class Zombie
 {
-	std::cout << "<" << this->_name << " (" << this->_type <<")>  Got cured Successfully" << std::endl;
-}
+private:
+	std::string _name;
+
+public:
+	Zombie(){};
+	Zombie(std::string);
+	~Zombie();
+	void setName(std::string);
+	void announce(void);
+};
+
+#endif

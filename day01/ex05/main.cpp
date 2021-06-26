@@ -5,17 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/20 15:05:14 by ymarji            #+#    #+#             */
-/*   Updated: 2021/06/21 14:04:49 by ymarji           ###   ########.fr       */
+/*   Created: 2021/06/25 14:53:49 by ymarji            #+#    #+#             */
+/*   Updated: 2021/06/26 14:37:13 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Human.hpp"
+#include "Karen.hpp"
 
 int main()
 {
-	Human bob;
+	Karen karen;
 
-	std::cout << bob.identify() << std::endl;
-	std::cout << bob.getBrain().identify1() << std::endl;
+	karen.complain("ERROR");
+	return 0;
 }

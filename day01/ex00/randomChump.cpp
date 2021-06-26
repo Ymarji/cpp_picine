@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/20 11:33:05 by ymarji            #+#    #+#             */
-/*   Updated: 2021/06/20 11:36:06 by ymarji           ###   ########.fr       */
+/*   Created: 2021/06/23 10:27:19 by ymarji            #+#    #+#             */
+/*   Updated: 2021/06/24 09:46:09 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-#include <iostream>
-#include <string>
+#include "Zombie.hpp"
 
-class Pony
+void randomChump(std::string name)
 {
-private:
-	std::string _name;
-public:
-	Pony(std::string);
-	~Pony();
-};
-
-#endif
+	Zombie *nZombie;
+	nZombie = newZombie(name);
+	nZombie->announce();
+	delete nZombie;
+}

@@ -5,27 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/20 12:12:12 by ymarji            #+#    #+#             */
-/*   Updated: 2021/06/22 11:12:37 by ymarji           ###   ########.fr       */
+/*   Created: 2021/06/20 14:48:06 by ymarji            #+#    #+#             */
+/*   Updated: 2021/06/24 09:45:46 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include "ZombieEvent.hpp"
+#include <iostream>
+#include <string>
 
-Zombie	*randomChump()
-{
-	ZombieEvent z_event;
-	Zombie *nZombie;
-	char *names[6] = {"Zombye", "Husk", "Staby", "Ogre", "Smochen", "KawaiZ"};
-	std::srand(time(NULL));
-	nZombie = z_event.newZombie(names[std::rand() % 6]);
-	// nZombie->announce();
-	return(nZombie);
-}
 int main()
 {
-	Zombie *nZom = randomChump();
-	delete nZom;
+	std::string str("HI THIS IS BRAIN");
+	std::string *stringPTR(&str);
+	std::string &stringREF(str);
+
+	std::cout << "Normal str call :  " << &str << std::endl;
+	std::cout << "pointer str call :  " << stringPTR << std::endl;
+	std::cout << "reference str call :  " << &stringREF << std::endl;
+
+	std::cout << "======================================== " << std::endl;
+
+	std::cout << "Normal str call :  " << str << std::endl;
+	std::cout << "pointer str call :  " << *stringPTR << std::endl;
+	std::cout << "reference str call :  " << stringREF << std::endl;
 	return (0);
 }

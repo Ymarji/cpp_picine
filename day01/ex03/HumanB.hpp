@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.cpp                                    :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/16 16:16:59 by ymarji            #+#    #+#             */
-/*   Updated: 2021/06/17 12:00:59 by ymarji           ###   ########.fr       */
+/*   Created: 2021/06/24 09:51:25 by ymarji            #+#    #+#             */
+/*   Updated: 2021/06/24 10:24:08 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ZombieEvent.hpp"
+#ifndef HUMANB_CPP
+#define HUMANB_CPP
 
+#include "Weapon.hpp"
 
-void	ZombieEvent::setZombieType(){
-	std::cout << " Zombie Type : ";
-	std::getline(std::cin, this->_type);
-}
+class HumanB
+{
+	private:
+		std::string _name;
+		Weapon		*_Weapon;
 
-Zombie* ZombieEvent::newZombie(std::string name){
-	this->setZombieType();
-	Zombie *z = new Zombie(name, this->_type);
-	return (z);
-}
+	public:
+		HumanB(std::string p1);
+		~HumanB(){};
+		void	setWeapon(Weapon &);
+		void attack();
+};
+#endif

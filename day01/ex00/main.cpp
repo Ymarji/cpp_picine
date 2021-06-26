@@ -5,25 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/20 11:32:59 by ymarji            #+#    #+#             */
-/*   Updated: 2021/06/20 11:41:03 by ymarji           ###   ########.fr       */
+/*   Created: 2021/06/23 10:32:35 by ymarji            #+#    #+#             */
+/*   Updated: 2021/06/26 14:49:16 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "Pony.hpp"
+#include "Zombie.hpp"
 
-void	ponyOnTheHeap(){
-	Pony *heap_pony = new Pony("heap");
-	delete heap_pony;
-}
-
-void	ponyOnTheStack(){
-	Pony stack_pony("stack");
-}
-
-int	main()
+int main()
 {
-	ponyOnTheHeap();
-	ponyOnTheStack();
-	return 0;
+	std::string name;
+	std::cout << "type Zombie Name : ";
+	std::cin >> name;
+	randomChump(name);
+	return (0);
 }

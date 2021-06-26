@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/20 12:06:50 by ymarji            #+#    #+#             */
-/*   Updated: 2021/06/20 12:25:34 by ymarji           ###   ########.fr       */
+/*   Created: 2021/06/25 11:34:09 by ymarji            #+#    #+#             */
+/*   Updated: 2021/06/25 11:37:16 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef KAREN_HPP
+# define KAREN_HPP
 
 #include <iostream>
-#include <string>
-#include <array>
+#include <string.h>
 
-class Zombie{
-	private:
-		std::string _name;
-		std::string _type;
-	public:
-		Zombie(std::string, std::string);
-		~Zombie();
-		void	announce();
+class Karen{
+	private :
+		void debug( void );
+		void info( void );
+		void warning( void );
+		void error( void );
+	public :
+		void complain( std::string level );
 };
 #endif

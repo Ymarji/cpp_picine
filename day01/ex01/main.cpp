@@ -5,29 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/22 15:54:39 by ymarji            #+#    #+#             */
-/*   Updated: 2021/06/24 10:23:54 by ymarji           ###   ########.fr       */
+/*   Created: 2021/06/23 10:54:36 by ymarji            #+#    #+#             */
+/*   Updated: 2021/06/23 11:07:53 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include "Zombie.hpp"
 
-int main()
+Zombie*	zombieHorde( int N, std::string name );
+
+int	main()
 {
+	int i;
+
+	std::cout << " num of Zombie to Creat (int) ::  ";
+	std::cin >> i;
+
+	if (!std::cin || i < 0)
 	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
+		std::cout << " wrong input " << std::endl;;
+		return (1);
 	}
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
+	Zombie *z = zombieHorde(i, "Zombie");
+	while (i--)
+		z[i].announce();
+	std::cout << " ====================================== " << std::endl;
+	delete[] z;
+	return (1);
 }
