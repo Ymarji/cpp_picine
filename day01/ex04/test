@@ -1,27 +1,17 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/06/24 10:44:25 by ymarji            #+#    #+#              #
-#    Updated: 2021/06/24 13:32:47 by ymarji           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+OLD here
+here OLD
+OLD and OLD and more OLD
 
-aa
-FLAGS = -Wall -Wextra -Werror
-NAME = Violence
-HEADER = 
-SRC = main.cpp
+OLD
+	OLD
 
-all : $(NAME)
 
-$(NAME) : $(SRC) $(HEADER)
-	$(aa
 
-fclean :
-	@rm -rf $(NAME)
 
-re : fclean all
+OLD
+
+
+
+
+
+

@@ -6,7 +6,7 @@
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 14:53:49 by ymarji            #+#    #+#             */
-/*   Updated: 2021/06/26 14:37:13 by ymarji           ###   ########.fr       */
+/*   Updated: 2021/06/26 18:29:38 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ int main()
 {
 	Karen karen;
 
-	karen.complain("ERROR");
+	karen.complain("DEBUG");
 	return 0;
 }
