@@ -57,7 +57,8 @@ void identify(Base& p){
                 delete &c;
             }
             catch(std::bad_cast &e){
-                std::cout << "No matching Class" << std::endl;
+                std::cout << e.what() << "\n";
+                std::cout << "No matching Class " << e.what() << std::endl;
             }
         }
     }

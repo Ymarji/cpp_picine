@@ -14,9 +14,9 @@ class Array
 	public:
 		Array<T>():_arr(new T(0)), _len(0){};
 
-		Array<T>(unsigned int len):_arr(new T[len]), _len(len){
-			for (unsigned int i = 0; i < len; i++)
-				_arr[i] = 0;
+		Array<T>(unsigned int len):_arr(new T[len]()), _len(len){
+			// for (unsigned int i = 0; i < len; i++)
+			// 	_arr[i] = 0;
 		};
 
 		Array<T>(Array const &rhs){
