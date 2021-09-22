@@ -6,7 +6,7 @@
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 15:42:23 by ymarji            #+#    #+#             */
-/*   Updated: 2021/09/20 16:00:08 by ymarji           ###   ########.fr       */
+/*   Updated: 2021/09/21 18:50:18 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Span{
 
 		int		shortestSpan( void ) const;
 		int		longestSpan( void ) const;
-		
+
 		class	ContainerFull: public std::exception{
 			const char * what () const throw ()
 			{

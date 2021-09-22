@@ -6,7 +6,7 @@
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 15:50:01 by ymarji            #+#    #+#             */
-/*   Updated: 2021/09/20 17:13:39 by ymarji           ###   ########.fr       */
+/*   Updated: 2021/09/21 18:37:34 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,6 @@ int		Span::shortestSpan( void ) const{
 	{
 		std::vector<int> v = _V;
 		std::sort(v.begin(), v.end());
-		// for (size_t i = 0; i < 100; i++)
-		// {
-		// 	std::cout << v[i] << std::endl;
-		// }
 		min = v[1] - v[0];
 		for (size_t i = 1; i < v.size() - 1; i++)
 		{

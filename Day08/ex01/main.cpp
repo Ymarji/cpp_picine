@@ -6,11 +6,13 @@
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 16:07:43 by ymarji            #+#    #+#             */
-/*   Updated: 2021/09/20 17:13:54 by ymarji           ###   ########.fr       */
+/*   Updated: 2021/09/21 18:58:10 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
+
+#include "../ex00/easyfind.hpp"
 #include "span.hpp"
 #include <array>
 int main()
@@ -19,7 +21,8 @@ int main()
     std::srand(std::time(NULL));
     for (size_t i = 0; i < 100; i++)
     {
-        sp.addNumber(i + i);
+        int nb = i * ((std::rand() % 3) + 1);
+        sp.addNumber(nb);
     }
     
     // try{
@@ -41,5 +44,5 @@ int main()
     }
     std::cout << "---------------------------------------" << std::endl;
     std::cout << sp.shortestSpan() << std::endl;
-    // std::cout << sp.longestSpan() << std::endl;
+    std::cout << sp.longestSpan() << std::endl;
 }
