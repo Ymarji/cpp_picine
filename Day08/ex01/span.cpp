@@ -6,7 +6,7 @@
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 15:50:01 by ymarji            #+#    #+#             */
-/*   Updated: 2021/09/21 18:37:34 by ymarji           ###   ########.fr       */
+/*   Updated: 2021/09/22 16:03:01 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,21 +50,23 @@ void	Span::addNumber(int Nb){
 
 int		Span::shortestSpan( void ) const{
 	int min;
+	
 	if (_V.size() < 2)
-		return 0;// todo
+		throw Span::NoSpanToFind();
 	else
 	{
 		std::vector<int> v = _V;
 		std::sort(v.begin(), v.end());
 		min = v[1] - v[0];
 		for (size_t i = 1; i < v.size() - 1; i++)
-		{
 			min = (min < (v[i + 1] - v[i]))? min :  v[i + 1] - v[i];
-		}
 		return min;
 	}
 }
 
 int		Span::longestSpan( void ) const{
-	return ((*std::max_element(_V.begin(), _V.end())) - (*std::min_element(_V.begin(), _V.end())));
+	if (_V.size() < 2)
+		throw Span::NoSpanToFind();
+	else
+		return ((*std::max_element(_V.begin(), _V.end())) - (*std::min_element(_V.begin(), _V.end())));
 }

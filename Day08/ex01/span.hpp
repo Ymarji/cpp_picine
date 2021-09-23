@@ -6,7 +6,7 @@
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 15:42:23 by ymarji            #+#    #+#             */
-/*   Updated: 2021/09/21 18:50:18 by ymarji           ###   ########.fr       */
+/*   Updated: 2021/09/23 12:49:51 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,17 @@ class Span{
 		int		&operator[](unsigned int);
 		
 		void	addNumber(int);
+		std::vector<int> getV(void) const{
+			return this->_V;
+		}
+		template < typename T >
+		void	addNumber(T itb, T ite)
+		{
+			if (std::distance(itb, ite) > static_cast<int>(_N - _V.size()))
+				throw ContainerFull();
+			else
+				_V.insert(_V.end(), itb, ite);
+		}
 
 		int		shortestSpan( void ) const;
 		int		longestSpan( void ) const;
@@ -41,6 +52,20 @@ class Span{
 			const char * what () const throw ()
 			{
 				return "Container Full";
+			}
+		};
+		
+		class	ContainerSize : public std::exception{
+			const char * what () const throw ()
+			{
+				return "Container isn't enough";
+			}
+		};
+		
+		class	NoSpanToFind: public std::exception{
+			const char * what () const throw ()
+			{
+				return "Cant Find Span";
 			}
 		};
 		~Span(){};
