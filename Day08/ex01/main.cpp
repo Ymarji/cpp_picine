@@ -6,7 +6,7 @@
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 16:07:43 by ymarji            #+#    #+#             */
-/*   Updated: 2021/09/23 12:54:40 by ymarji           ###   ########.fr       */
+/*   Updated: 2021/09/24 10:25:50 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ int main()
         int nb = i * ((std::rand() % 3) + 1);
         v.push_back(nb);
     }
-
     sp.addNumber(v.begin(), v.end());
     for (size_t i = 0; i < SIZE; i++)
         std::cout << v[i] << std::endl;
