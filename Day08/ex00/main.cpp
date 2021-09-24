@@ -6,7 +6,7 @@
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 17:47:49 by ymarji            #+#    #+#             */
-/*   Updated: 2021/09/18 16:21:47 by ymarji           ###   ########.fr       */
+/*   Updated: 2021/09/24 13:54:04 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main(){
     v.push_back(1);
     v.push_back(42);
     v.push_back(1337);
-    std::cout << ((easyfind(v, 3))? "true" : "false");
-    // ((easyfind(lst, 43))? "true" : "false")
+    std::cout << ((easyfind(v, 3))? "true" : "false") << std::endl;
+    std::cout << ((easyfind(lst, 42))? "true" : "false");
     
 }
