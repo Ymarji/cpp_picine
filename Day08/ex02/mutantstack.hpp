@@ -1,9 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   mutantstack.hpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/24 13:34:56 by ymarji            #+#    #+#             */
+/*   Updated: 2021/09/24 13:39:00 by ymarji           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef MUTANTSTACK_HPP
 #define MUTANTSTACK_HPP
 
 #include <algorithm>
 #include <iostream>
 #include <vector>
+#include <array>
 
 #include <stack>
 #include <deque>
