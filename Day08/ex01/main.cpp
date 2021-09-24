@@ -6,7 +6,7 @@
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 16:07:43 by ymarji            #+#    #+#             */
-/*   Updated: 2021/09/24 10:25:50 by ymarji           ###   ########.fr       */
+/*   Updated: 2021/09/24 13:35:13 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "../ex00/easyfind.hpp"
 #include "span.hpp"
 #include <array>
+#include <list>
 #define SIZE 10
 int main()
 {
@@ -39,7 +40,7 @@ int main()
     //     std::cout << e.what() << std::endl;
     // }
     
-    std::cout << "-------------------- RANGE TEST-------------------" << std::endl;
+    std::cout << "-------------------- PRINT RANGE TEST-------------------" << std::endl;
     std::vector<int> v;
     for (size_t i = 0; i < SIZE; i++)
     {
@@ -49,11 +50,11 @@ int main()
     sp.addNumber(v.begin(), v.end());
     for (size_t i = 0; i < SIZE; i++)
         std::cout << v[i] << std::endl;
-    // std::cout << "--------------------- PRINT ELEMENT ------------------" << std::endl;
-    // for (size_t i = 0; i < SIZE; i++)
-    // {
-    //     std::cout << sp[i] << std::endl;
-    // }
+    std::cout << "--------------------- PRINT SPAN ELEMENT ------------------" << std::endl;
+    for (size_t i = 0; i < SIZE; i++)
+    {
+        std::cout << sp[i] << std::endl;
+    }
     std::cout << "--------------- LONG and SHORT SPAN ------------------" << std::endl;
     std::cout << sp.shortestSpan() << std::endl;
     std::cout << sp.longestSpan() << std::endl;

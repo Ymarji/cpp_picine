@@ -6,7 +6,7 @@
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 17:47:46 by ymarji            #+#    #+#             */
-/*   Updated: 2021/09/18 16:16:29 by ymarji           ###   ########.fr       */
+/*   Updated: 2021/09/24 11:35:33 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
+#include <stack>
 
 template < typename T >
 bool    easyfind(T & stack, int in)

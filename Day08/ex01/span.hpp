@@ -6,7 +6,7 @@
 /*   By: ymarji <ymarji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 15:42:23 by ymarji            #+#    #+#             */
-/*   Updated: 2021/09/23 12:49:51 by ymarji           ###   ########.fr       */
+/*   Updated: 2021/09/24 11:41:54 by ymarji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,12 @@ class Span{
 		std::vector<int> getV(void) const{
 			return this->_V;
 		}
+		
 		template < typename T >
 		void	addNumber(T itb, T ite)
 		{
 			if (std::distance(itb, ite) > static_cast<int>(_N - _V.size()))
-				throw ContainerFull();
+				throw ContainerSize();
 			else
 				_V.insert(_V.end(), itb, ite);
 		}
